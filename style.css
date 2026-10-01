@@ -1,0 +1,279 @@
+/* Настройки для ВСЕХ концовок в игре */
+.ending {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: #ffffff;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Настройки для ВСЕХ фонов в игре */
+tw-story {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: #ffffff;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Фон для начала */
+tw-story[tags~="start"]::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/start1.jpg?raw=true') !important; 
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  filter: blur(5px); 
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+}
+
+/* Специальное окно для главного меню по центру */
+.menu-box {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 50% !important;
+  max-width: 600px !important;
+  background-color: rgba(25, 25, 25, 0.65) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-radius: 12px !important;
+  padding: 40px !important;
+  box-sizing: border-box !important;
+  z-index: 10 !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+  text-align: center !important;
+}
+
+
+/* Настройки шрифта для самого текста на стартовом экране */
+tw-story[tags~="start"] {
+  font-family: "Georgia", serif;
+  background-image: none !important;
+}
+
+/* Яркая и заметная кнопка «Начать игру» в главном меню */
+.menu-box .renpy-row tw-link,
+.menu-box .renpy-row a {
+  background: #ff9966 !important; 
+  color: #111111 !important;
+  font-weight: bold !important;
+  font-size: 1.1em !important;
+  padding: 12px 30px !important; 
+  border: none !important; 
+  border-radius: 8px !important;
+  box-shadow: 0 4px 15px rgba(255, 153, 102, 0.4) !important; 
+  transition: all 0.25s ease !important;
+}
+
+/* Эффект при наведении на кнопку */
+.menu-box .renpy-row tw-link:hover,
+.menu-box .renpy-row a:hover {
+  background: #ffb380 !important;
+  box-shadow: 0 6px 20px rgba(255, 153, 102, 0.6) !important; 
+}
+
+
+/* Фон для сцен с тегом 'room' */
+tw-story[tags~="room"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/room.jpg?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'nightroom' */
+tw-story[tags~="nightroom"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/bed.jpg?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'cafe' */
+tw-story[tags~="cafe"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/cafe.jpg?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'street' */
+tw-story[tags~="street"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/street_day.jpg?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'salon' */
+tw-story[tags~="salon"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/salon_for_foto.jpg?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'darkroom' */
+tw-story[tags~="darkroom"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/darkroom.jpg?raw=true') !important;
+}
+
+/* Диалоговое окно с размытием фона */
+.renpy-box {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    max-width: 1700px !important;
+    background-color: rgba(25, 25, 25, 0.75) !important;
+    backdrop-filter: blur(12px) !important; 
+    -webkit-backdrop-filter: blur(12px) !important;    
+    border: 1px solid rgba(255, 255, 255, 0.15) !important; 
+    border-radius: 12px !important; 
+    padding: 25px 35px !important;
+    box-sizing: border-box !important;
+    min-height: 180px !important;
+    z-index: 10 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important; 
+}
+
+/* Имя персонажа */
+.renpy-name {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #ff9966; 
+    margin-bottom: 15px;
+}
+
+/* Текст реплики */
+.renpy-text {
+    color: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    min-height: 45px;
+}
+
+/* Контейнер для элементов управления */
+.renpy-choices-container {
+    position: relative !important;
+    width: 100% !important;
+    margin-top: auto !important;
+    z-index: 20 !important;
+    text-align: left !important; 
+}
+
+/* Стилизация кнопки "Далее →" */
+.renpy-choices-container tw-link:not(.renpy-row *) {
+    display: inline-block !important;
+    color: #ff9966 !important; 
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 1em !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.renpy-choices-container tw-link:not(.renpy-row *):hover {
+    opacity: 0.8 !important;
+}
+
+/* Ряд для финальных кнопок выбора (центрирует их) */
+.renpy-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important; 
+    gap: 15px !important; 
+    width: 100% !important;
+}
+
+/* Компактные кнопки выбора */
+.renpy-row tw-link,
+.renpy-row a {
+    display: inline-block !important;
+    min-width: 140px !important; 
+    background: rgba(255, 255, 255, 0.05) !important; 
+    border: 1px solid rgba(255, 255, 255, 0.25) !important; 
+    padding: 8px 18px !important; 
+    color: #85b3e6 !important; 
+    text-decoration: none !important;
+    border-radius: 6px !important; 
+    font-size: 0.95em !important;
+    box-sizing: border-box !important;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Эффект подсвечивания кнопок при наведении */
+.renpy-row tw-link:hover,
+.renpy-row a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #85b3e6 !important;
+    color: #ffffff !important;
+}
+
+/* Контейнер спрайта — по центру, за диалоговым окном */
+.sprite-container {
+  position: fixed !important;
+  bottom: -10 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: flex-end !important;
+  z-index: 5 !important;
+  pointer-events: none !important;
+  margin-top: -100px;  /* Добавляем отрицательный отступ */
+}
+
+/* Сам спрайт1 */
+.character-sprite1 {
+    position: fixed;
+    bottom: 0;
+    left: 5%;
+    max-height: 85vh !important;
+    max-width: 50vw !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5)) !important;
+    opacity: 1;
+    animation: fadeIn 0.8s ease forwards;
+    transition: all 0.5s ease;
+}
+
+/* Сам спрайт2 */
+.character-sprite2 {
+    position: fixed !important;
+    bottom: 0;
+    right: 5% !important;
+    max-height: 85vh !important;
+    max-width: 50vw !important;
+    object-fit: contain !important;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.5)) !important;
+    opacity: 1;
+    animation: fadeIn 0.8s ease forwards;
+    transition: all 0.5s ease;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Плавное исчезновение при смене */
+.character-sprite.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+}
