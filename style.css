@@ -1,7 +1,7 @@
 /* Настройки для ВСЕХ концовок в игре */
 .ending {
-    background-size: cover !important;
-    background-position: center !important;
+    size: cover !important;
+    position: center !important;
     background-repeat: no-repeat !important;
     background-attachment: fixed !important;
     color: #ffffff;
@@ -91,15 +91,29 @@ tw-story[tags~="start"] {
   box-shadow: 0 6px 20px rgba(255, 153, 102, 0.6) !important; 
 }
 
-
 /* Фон для сцен с тегом 'room' */
 tw-story[tags~="room"] {
     background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/room.jpg?raw=true') !important;
 }
 
 /* Фон для сцен с тегом 'nightroom' */
-tw-story[tags~="nightroom"] {
-    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/backgrounds/bed.jpg?raw=true') !important;
+tw-story[tags~="nightroom1"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/Sprites/V_Bed_Phone.png?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'sleep' */
+tw-story[tags~="sleep"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/Sprites/V_Sleep.png?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'call' */
+tw-story[tags~="call"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/Sprites/V_Bed_Call.png?raw=true') !important;
+}
+
+/* Фон для сцен с тегом 'scroll' */
+tw-story[tags~="scroll"] {
+    background-image: url('https://github.com/wdyw-o/photo_developing/blob/main/Sprites/V_Bed_Scroll.png?raw=true') !important;
 }
 
 /* Фон для сцен с тегом 'cafe' */
@@ -161,13 +175,18 @@ tw-story[tags~="darkroom"] {
     min-height: 45px;
 }
 
-/* Контейнер для элементов управления */
 .renpy-choices-container {
-    position: relative !important;
-    width: 100% !important;
-    margin-top: auto !important;
-    z-index: 20 !important;
-    text-align: left !important; 
+    position: fixed !important;    /* фиксировано относительно окна */
+    bottom: 30px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    max-width: 800px;
+    z-index: 100 !important;       /* выше других элементов */
+    text-align: center !important;
+    background: rgba(0, 0, 0, 0.3); /* опционально */
+    padding: 10px;
+    border-radius: 8px;
 }
 
 /* Стилизация кнопки "Далее →" */
@@ -235,7 +254,7 @@ tw-story[tags~="darkroom"] {
   align-items: flex-end !important;
   z-index: 5 !important;
   pointer-events: none !important;
-  margin-top: -100px;  /* Добавляем отрицательный отступ */
+  margin-top: -100px;
 }
 
 /* Сам спрайт1 */
