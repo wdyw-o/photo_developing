@@ -175,32 +175,31 @@ tw-story[tags~="darkroom"] {
     min-height: 45px;
 }
 
-.renpy-choices-container {
-    position: fixed !important;    /* фиксировано относительно окна */
-    bottom: 30px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    width: 90% !important;
-    max-width: 800px;
-    z-index: 100 !important;       /* выше других элементов */
-    text-align: center !important;
-    background: rgba(0, 0, 0, 0.3); /* опционально */
-    padding: 10px;
-    border-radius: 8px;
+/* Родительский контейнер пассажа */
+tw-passage {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-/* Стилизация кнопки "Далее →" */
-.renpy-choices-container tw-link:not(.renpy-row *) {
-    display: inline-block !important;
-    color: #ff9966 !important; 
-    text-decoration: none !important;
-    font-weight: bold !important;
-    font-size: 1em !important;
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    cursor: pointer;
-    transition: opacity 0.2s;
+/* Текстовый блок */
+.renpy-box {
+    flex: 1;  /* занимает всё доступное пространство */
+    margin-bottom: 20px;
+}
+
+/* Контейнер кнопок */
+.renpy-choices-container {
+    position: static !important;  /* убираем absolute/fixed */
+    width: 100% !important;
+    margin-top: auto !important;  /* прижимает к низу */
+    z-index: 20 !important;
+    text-align: center !important;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 8px;
 }
 
 .renpy-choices-container tw-link:not(.renpy-row *):hover {
